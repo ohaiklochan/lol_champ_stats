@@ -1,0 +1,10 @@
+1. create gemfile
+2. build cli
+ - welcome user
+ - choose between list champs or exit
+3. list champs
+ - choose champs
+  - show information about champ
+4. choose exit
+  - goodbye
+  
