@@ -8,3 +8,9 @@
 4. choose exit
   - goodbye
   
+  
+  
+3 classes
+- cli - controller - what communicates with my user
+- champs - where objects are created and stored for user to display
+- api - bring in external, consumable api here, instantiate my objects
