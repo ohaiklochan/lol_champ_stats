@@ -1,3 +1,5 @@
 #!/usr/bin/env ruby
 
 require_relative '../lib/lol_champ_stats'
+
+LolChampStats::CLI.new.call
