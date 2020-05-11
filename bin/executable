@@ -1,5 +1,10 @@
 #!/usr/bin/env ruby
 
+require 'pry'
+require 'rest-client'
+require 'json'
+require 'httparty'
+
 require_relative '../lib/lol_champ_stats'
 
 LolChampStats::CLI.new.call
