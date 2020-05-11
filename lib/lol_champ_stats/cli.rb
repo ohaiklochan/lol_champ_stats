@@ -15,12 +15,23 @@ class LolChampStats::CLI
     input = gets.strip.downcase
     
     if input == "champions"
-      puts "list"
+      champions_list
+      menu
     elsif input == "exit"
-      puts "See ya later!"
+      goodbye
     else 
       invalid_entry
     end
+  end
+  
+  def champions_list
+    puts "1. champ 1"
+    puts "2. champ 2"
+    puts "3. champ 3"
+  end
+  
+  def goodbye
+    puts "GLHF!"
   end
   
   def invalid_entry
