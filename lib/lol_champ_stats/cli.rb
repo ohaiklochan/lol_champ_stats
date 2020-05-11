@@ -28,6 +28,19 @@ class LolChampStats::CLI
     puts "1. champ 1"
     puts "2. champ 2"
     puts "3. champ 3"
+    puts ""
+    puts "Which champion would you like to know more about?"
+    input = gets.strip.downcase
+    
+    champion_selection(input)
+  end
+  
+  def champion_selection(champion)
+#go over champion array and use find method to find champions
+    puts "#{champion}"
+    
+    
+    champions_list
   end
   
   def goodbye
