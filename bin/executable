@@ -8,3 +8,4 @@ require 'httparty'
 require_relative '../lib/lol_champ_stats'
 
 LolChampStats::CLI.new.call
+binding.pry
