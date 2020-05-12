@@ -9,9 +9,9 @@ Gem::Specification.new do |spec|
   spec.authors       = ["'Chloe Steffens'"]
   spec.email         = ["'caforonda103@yahoo.com'"]
 
-  spec.summary       = %q{TODO: Write a short summary, because RubyGems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{This gem gives out information about all champions in League of Legends}
+  spec.description   = %q{This gem specifically tells the user about each champion as well as all of their abilites.Champions span a variety of roles and blend a variety of fantasy tropes, such as sword and sorcery, steampunk, and Lovecraftian horror. Although the discrete nature of each match prohibits an overarching narrative in-game, the various champions make up a large and ever-evolving fictional universe developed by Riot Games through short stories, comics, cinematics, and books.}
+  spec.homepage      = "https://github.com/ohaiklochan/lol_champ_stats.git"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
