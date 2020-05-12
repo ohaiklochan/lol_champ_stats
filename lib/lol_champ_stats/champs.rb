@@ -13,8 +13,8 @@ class Champions
   # end
   
   def initialize(champions)
-    champions.each {|k, v| 
-      self.send ("#{k}=", v )} if self.respond_to?{("#{k}=")}
+    champions.each |k, v| 
+      self.send (("#{k}=", v )) if self.respond_to?{("#{k}=")}
     end
     save
   end

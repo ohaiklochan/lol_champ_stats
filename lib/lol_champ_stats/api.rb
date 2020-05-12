@@ -7,5 +7,3 @@ class API
       Champion.new(champion)
     end
   end
-  
-end
