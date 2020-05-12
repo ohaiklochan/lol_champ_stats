@@ -5,5 +5,6 @@ class API
     champions_array = JSON.parse(response.body)["results"]
     champions_array.each.do |champion|
       Champion.new(champion)
-    end
   end
+
+end
