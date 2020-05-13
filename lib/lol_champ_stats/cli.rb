@@ -8,40 +8,43 @@ class LolChampStats::CLI
     puts "We can find out more about the champions by typing in 'champions'"
     puts ""
     puts "If you want to exit, just type in 'exit'"
-    menu
+    @champions = gets.strip.downcase
+    API.get_data(@champions)
+    champions_list(Champions.all)
+    # menu
   end
   
-  def menu
-    input = gets.strip.downcase
+  # def menu
+  #   input = gets.strip.downcase
     
-    if input == "champions"
-      champions_list
-      menu
-    elsif input == "exit"
-      goodbye
-    else 
-      invalid_entry
-    end
-  end
+  #   if input == "champions"
+  #     champions_list
+  #     menu
+  #   elsif input == "exit"
+  #     goodbye
+  #   else 
+  #     invalid_entry
+  #   end
+  # end
   
-  def champions_list
-    puts ""
-    puts "Choose a champion:"
-    puts ""
-    champion.each.with_index(0) do |champion, index|
-      puts "#{i}. #{champion.name}"
-    end
-    puts ""
-    puts "Which champion would you like to know more about?"
-  end
+  # def champions_list(champions)
+  #   puts ""
+  #   puts "Choose a champion:"
+  #   puts ""
+  #   champions.each.with_index(0) do |champion, index|
+  #     puts "#{i}. #{champion.name}"
+  #   end
+  #   puts ""
+  #   puts "Which champion would you like to know more about?"
+  # end
   
-  def goodbye
-    puts "GLHF!"
-  end
+  # def goodbye
+  #   puts "GLHF!"
+  # end
   
-  def invalid_entry
-    puts "I don't understand. Please enter a valid response."
-    menu
-  end
+  # def invalid_entry
+  #   puts "I don't understand. Please enter a valid response."
+  #   menu
+  # end
   
 end
