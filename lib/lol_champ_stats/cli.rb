@@ -41,6 +41,7 @@ class LolChampStats::CLI
     
     
     champions_list
+    
   end
   
   def goodbye

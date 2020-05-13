@@ -10,6 +10,8 @@ class Champions
     @blurb = blurb
     @tags = tags
     @stats = stats
+    
+    @@all << self
   end
   
   # def initialize(champions)
@@ -19,14 +21,13 @@ class Champions
   #   save
   # end
   
-  def save
-    @@all << self
-  end
   
   def self.all
     @@all
   end
   
-  
+  def self.clear
+    @@all.clear
+  end
   
 end
