@@ -14,14 +14,6 @@ class Champions
     @@all << self
   end
   
-  # def initialize(champions)
-  #   champions.each |k, v| 
-  #     self.send (("#{k}=", v )) if self.respond_to?{("#{k}=")}
-  #   end
-  #   save
-  # end
-  
-  
   def self.all
     @@all
   end
