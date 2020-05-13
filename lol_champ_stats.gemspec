@@ -40,7 +40,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake", "~> 12.3.3"
   spec.add_development_dependency "rspec"
   spec.add_development_dependency "pry"
-  spec.add_dependency "rest-client"
   spec.add_dependency "json"
   spec.add_dependency "httparty"
 end

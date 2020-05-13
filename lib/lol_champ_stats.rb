@@ -4,5 +4,5 @@ require_relative "./lol_champ_stats/api"
 require_relative "./lol_champ_stats/champs"
 
 
-require 'rest-client'
+require 'httparty'
 require 'json'
