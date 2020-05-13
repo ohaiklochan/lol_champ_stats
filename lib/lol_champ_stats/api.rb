@@ -1,16 +1,15 @@
 class API
   
   def self.get_data(champions)
-    championinfo = Net::HTTP.get("http://ddragon.leagueoflegends.com/cdn/10.9.1/data/en_US/champion.json")
-    champions_array = JSON.parse(championinfo)["champion"]
-    binding.pry
+    response = Net::HTTP.get("https://raw.githubusercontent.com/ngryman/lol-champions/master/champions.json")
+    champions_array = JSON.parse(response)["champion"]
     champions_array.each do |champion_details|
       name = champion_name["name"]
       title = champion_title["title"]
-      blurb = chamption_history["blurb"]
+      description = chamption_history["description"]
       tags = champion_type["tags"]
       stats = champion_stats["stats"]
-      Champion.new(name: name, title: title, blurb: blurb, tags: tags, stats: stats)
+      Champion.new(name: name, title: title, description: description, tags: tags, stats: stats)
     end
   end
 

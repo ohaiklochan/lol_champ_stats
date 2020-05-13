@@ -27,16 +27,16 @@ class LolChampStats::CLI
   #   end
   # end
   
-  # def champions_list(champions)
-  #   puts ""
-  #   puts "Choose a champion:"
-  #   puts ""
-  #   champions.each.with_index(0) do |champion, index|
-  #     puts "#{i}. #{champion.name}"
-  #   end
-  #   puts ""
-  #   puts "Which champion would you like to know more about?"
-  # end
+  def champions_list(champions)
+    puts ""
+    puts "Choose a champion:"
+    puts ""
+    champions.each.with_index(0) do |champion, index|
+      puts "#{index}. #{champion.name}"
+    end
+    puts ""
+    puts "Which champion would you like to know more about?"
+  end
   
   # def goodbye
   #   puts "GLHF!"
