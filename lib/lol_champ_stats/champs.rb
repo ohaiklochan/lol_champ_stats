@@ -2,14 +2,14 @@ class Champions
   
   @@all = []
   
-  attr_accessor :name, :title, :blurb, :info, :tags
+  attr_accessor :name, :title, :blurb, :tags, :stats
   
-  def initialize
+  def initialize(name:, title:, blurb:, tags:, stats:)
     @name = name
     @title = title
     @blurb = blurb
-    @info = info
     @tags = tags
+    @stats = stats
   end
   
   # def initialize(champions)
