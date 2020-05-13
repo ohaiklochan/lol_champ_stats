@@ -13,11 +13,9 @@ class LolChampStats::CLI
   
   def menu
     input = gets.strip.downcase
-    @champions = gets.strip.downcase
     
     if input == "champions"
       champions_list(Champions.all)
-      API.get_data(@champions)
       menu
     elsif input == "exit"
       goodbye
@@ -34,7 +32,18 @@ class LolChampStats::CLI
       puts "#{index}. #{champion.name}"
     end
     puts ""
+    champions_selection(champions)
+  end
+  
+  def champions_selection(champions)
     puts "Which champion would you like to know more about?"
+    input = gets.strip.downcase
+    
+    if input == "#{champion.name}"
+      API.get_data(champions)
+    else
+      invalid_entry
+    end
   end
   
   def goodbye
