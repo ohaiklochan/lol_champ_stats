@@ -10,7 +10,6 @@ class Champions
     @description = description
     @tags = tags
     @stats = stats
-    
     @@all << self
   end
   
