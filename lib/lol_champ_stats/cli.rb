@@ -15,7 +15,7 @@ class LolChampStats::CLI
     input = gets.strip.downcase
     
     if input == "champions"
-      champions_list(Champions.all)
+      champions_list
       menu
     elsif input == "exit"
       goodbye
@@ -40,7 +40,7 @@ class LolChampStats::CLI
     input = gets.strip.downcase
     
     if input == "#{champion.name}"
-      API.get_data(champions)
+      API.get_data(champion)
     else
       invalid_entry
     end
