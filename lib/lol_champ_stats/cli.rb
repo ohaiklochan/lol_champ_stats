@@ -33,7 +33,7 @@ class LolChampStats::CLI
     
     while input != "exit"
       if input == "#{champion.name}"
-        Champions.find_by_name(champions)
+        Champions.select_by_name(champions)
         API.get_data(champion)
       elsif input == 'list'
         champions_list(champions)
