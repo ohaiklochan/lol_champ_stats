@@ -6,8 +6,7 @@ class LolChampStats::CLI
     puts "Let's find out about the League of Legends champions, shall we?"
     puts ""
     puts "We can find out more about the champions by typing in 'champions'"
-    puts ""
-    puts "If you want to exit, just type in 'exit'"
+    
     champions = gets.strip.downcase
     API.get_data(champions)
     champions_list(Champions.all)
@@ -41,17 +40,21 @@ class LolChampStats::CLI
     puts "Which champion would you like to know more about?"
     puts "Type the champion name to find out more!"
     puts ""
-    puts "If you need to see the list again, type 'list'. If you want to exit, type 'exit'."
+    puts "If you need to see the list again, type 'list'."
+    puts "If you want to exit, type 'exit'."
     input = gets.strip.downcase
     
     while input != "exit"
-    if input == "#{champion.name}"
-      
-    elsif input == 'list'  
-    else
-      invalid_entry
+      if input == "#{champion.name}"
+        Champions.find_by_name(champions)
+        API.get_data(champion)
+      elsif input == 'list'
+        champions_list(champions)
+      else
+        invalid_entry
+      end
+      goodbye
     end
-    goodbye
   end
   
   def goodbye
@@ -60,7 +63,7 @@ class LolChampStats::CLI
   
   def invalid_entry
     puts "I don't understand. Please enter a valid response."
-    menu
+    champions_selection(champions)
   end
   
 end

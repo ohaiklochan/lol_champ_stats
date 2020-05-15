@@ -22,4 +22,8 @@ class Champions
     @@all.clear
   end
   
+  def self.find_by_name(champions)
+    self.all.select {|champion| champion.name == name}
+  end
+  
 end
