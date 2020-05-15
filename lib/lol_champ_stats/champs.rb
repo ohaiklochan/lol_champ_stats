@@ -21,7 +21,7 @@ class Champions
   def self.clear
     @@all.clear
   end
-  
+      binding.pry
   def self.select_by_name(champions)
     self.all.select {|champion| champion.name == name}
   end

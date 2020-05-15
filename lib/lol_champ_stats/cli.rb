@@ -29,6 +29,7 @@ class LolChampStats::CLI
     puts ""
     puts "If you need to see the list again, type 'list'."
     puts "If you want to exit, type 'exit'."
+    
     input = gets.strip.downcase
     
     while input != "exit"
