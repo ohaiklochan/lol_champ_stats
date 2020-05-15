@@ -12,19 +12,6 @@ class LolChampStats::CLI
     champions_list(Champions.all)
   end
   
-  # def menu
-  #   input = gets.strip.downcase
-    
-  #   if input == "champions"
-  #     champions_list
-  #     menu
-  #   elsif input == "exit"
-  #     goodbye
-  #   else 
-  #     invalid_entry
-  #   end
-  # end
-  
   def champions_list(champions)
     puts ""
     puts "Choose a champion:"
