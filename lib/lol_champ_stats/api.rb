@@ -2,7 +2,7 @@ class API
               binding.pry
   def self.get_data(champion)
     response = HTTParty.get("https://raw.githubusercontent.com/ngryman/lol-champions/master/champions.json")
-    champions_array = JSON.parse(response)["champion"]
+    champions_array = JSON.parse(response)
     champions_array.each do |champion_details|
 
       name = champion_name["name"]
