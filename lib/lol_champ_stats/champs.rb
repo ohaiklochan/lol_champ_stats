@@ -23,7 +23,7 @@ class Champions
   end
 
   def self.find_by_name(name)
-    self.all.select {|champion| champion.name == name}
+    self.all.find_all {|champion| champion.name == name}
   end
   
 end
