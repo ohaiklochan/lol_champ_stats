@@ -29,9 +29,9 @@ class LolChampStats::CLI
     puts ""
     puts "If you need to see the list again, type 'list'."
     puts "If you want to exit, type 'exit'."
-    
+
     input = gets.strip.downcase
-    
+
     while input != "exit"
       if input == "#{champion.name}"
         Champions.select_by_name(champions)
@@ -41,8 +41,10 @@ class LolChampStats::CLI
       else
         invalid_entry
       end
-      goodbye
+      puts "If you need to see the list again, type 'list'."
+      puts "If you want to exit, type 'exit'."
     end
+    goodbye
   end
   
   def goodbye
