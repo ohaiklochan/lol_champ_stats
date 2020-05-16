@@ -1,5 +1,5 @@
 class API
- 
+
   def self.get_data(champion)
     response = HTTParty.get("https://raw.githubusercontent.com/ngryman/lol-champions/master/champions.json")
     champions_array = JSON.parse(response)
@@ -12,12 +12,12 @@ class API
 
     end
   end
-  
+    binding.pry
   def self.getChampDeets(champion)
     response = HTTParty.get("https://raw.githubusercontent.com/ngryman/lol-champions/master/champions.json")
     champion_deets = JSON.parse(response)
     champions_array.each do |champion_deets|
-      
+     
       description = champion_deets["description"]
       tags = champion_deets["tags"]
       stats = champion_deets["stats"]

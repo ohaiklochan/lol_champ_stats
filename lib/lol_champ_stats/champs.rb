@@ -4,12 +4,12 @@ class Champions
 
   attr_accessor :name, :title, :description, :tags, :stats
 
-  def initialize(name:, title:, description:, tags:, stats:)
+  def initialize(name:, title:)
     @name = name
     @title = title
-    @description = description
-    @tags = tags
-    @stats = stats
+    # @description = description
+    # @tags = tags
+    # @stats = stats
 
     @@all << self
   end
