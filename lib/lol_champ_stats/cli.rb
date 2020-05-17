@@ -15,12 +15,14 @@ class LolChampStats::CLI
   def menu
     input = gets.strip.downcase
     
-    if input == 'champions'
+    if input == "champions"
       champions_list
-    elsif input == 'exit'
+      menu
+    elsif input == "exit"
       goodbye
     else
       invalid_entry
+      menu
     end
   end
   
@@ -45,9 +47,13 @@ class LolChampStats::CLI
     champ.each do |champion|
       puts ""
       puts "Name: #{champion.name}"
+      puts ""
       puts "Title: #{champion.title}"
+      puts ""
       puts "Tags: #{champion.tags}"
+      puts ""
       puts "Description: #{champion.description}"
+      puts ""
       puts "Stats: #{champion.stats}"
       puts ""
       puts ""
@@ -66,8 +72,6 @@ class LolChampStats::CLI
   def invalid_entry
     puts ""
     puts ">>>>>>I don't understand. Please enter a valid response.<<<<<<"
-    puts ""
-    menu
   end
   
 end
