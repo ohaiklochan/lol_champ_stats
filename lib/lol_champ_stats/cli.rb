@@ -25,7 +25,7 @@ class LolChampStats::CLI
   
   def champions_selection(champions)
     puts "Which champion would you like to know more about?"
-    puts "Type the champion name to find out more!"
+    puts "Type the champion number to find out more!"
     puts ""
     puts "If you need to see the list again, type 'list'."
     puts "If you want to exit, type 'exit'."
@@ -33,8 +33,9 @@ class LolChampStats::CLI
     input = gets.strip.downcase
 
     if input == input.to_i > 0 && intput.to_i < champions.length
-      champion = champions [input.to_i - 1]
-      API.getChampDeets(champion)
+      champion = champions.find_by_name(name) [input.to_i - 1]
+      # API.get_data(champion)
+      print_champion_details(champion)
       
     elsif input == 'list'
       # champion = Champions.find_by_name(name)
@@ -46,6 +47,14 @@ class LolChampStats::CLI
       invalid_entry
       champions_selection(champions)
     end
+  end
+      binding.pry
+  def print_champion_details(champion)
+    puts champion.name
+    puts champion.title
+    puts champion.tags
+    puts champion.description
+    puts champion.stats
   end
   
   def goodbye
