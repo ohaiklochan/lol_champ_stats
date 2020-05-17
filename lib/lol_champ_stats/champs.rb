@@ -23,9 +23,7 @@ class Champions
   end
 
   def self.find_by_name(name)
-    self.all.select do |champion| 
-      champion.name == name
-    end
+    self.all.select {|champion| champion.name.downcase == name}
   end
   
 end
