@@ -22,7 +22,6 @@ class LolChampStats::CLI
       goodbye
     else
       invalid_entry
-      menu
     end
   end
   
@@ -72,6 +71,7 @@ class LolChampStats::CLI
   def invalid_entry
     puts ""
     puts ">>>>>>I don't understand. Please enter a valid response.<<<<<<"
+    menu
   end
   
 end
