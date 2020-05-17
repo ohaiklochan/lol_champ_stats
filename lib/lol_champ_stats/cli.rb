@@ -1,6 +1,15 @@
 class LolChampStats::CLI
   
   def call
+    API.get_data
+    welcome
+    menu
+  end
+  
+  def welcome
+    l = Artii::Base.new :font => 'slant'
+    puts l.asciify('League of Legends')
+    puts ""
     puts "Welcome fellow gamer!"
     puts ""
     puts "Let's find out about the League of Legends champions, shall we?"
@@ -8,8 +17,6 @@ class LolChampStats::CLI
     puts "We can find out more about the champions by typing in 'champions'."
     puts ""
     puts "If you want to exit, type 'exit'."
-    API.get_data
-    menu
   end
   
   def menu
@@ -42,6 +49,7 @@ class LolChampStats::CLI
   end
   
   def champions_selection(champions)
+    
     champ = Champions.find_by_name(champions)
     champ.each do |champion|
       puts ""
@@ -59,13 +67,15 @@ class LolChampStats::CLI
       puts "Did you want to see another champion?"
       puts "Type 'champions' to see the list again."
       puts "Type 'exit' to exit the program."
+      
     end
-    menu
   end
 
   def goodbye
     puts ""
     puts "GLHF!"
+    g = Artii::Base.new :font => 'slant'
+    puts g.asciify('GLHF!')
   end
   
   def invalid_entry

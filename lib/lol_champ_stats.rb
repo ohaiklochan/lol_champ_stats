@@ -6,3 +6,5 @@ require_relative "./lol_champ_stats/champs"
 
 require 'httparty'
 require 'json'
+require 'artii'
+require 'pry'
