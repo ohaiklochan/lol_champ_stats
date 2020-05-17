@@ -20,25 +20,24 @@ class LolChampStats::CLI
       puts "#{index}. #{champion.name}"
     end
     puts ""
+    puts "Which champion would you like to know more about?"
+    puts "Type the champion name to find out more!"
+    puts ""
+    puts "If you need to see the list again, type 'list'."
+    puts "If you want to exit, type 'exit'."
     champions_selection(champions)
   end
   
   def champions_selection(champions)
-    puts "Which champion would you like to know more about?"
-    puts "Type the champion number to find out more!"
-    puts ""
-    puts "If you need to see the list again, type 'list'."
-    puts "If you want to exit, type 'exit'."
-      # binding.pry
+     #binding.pry
     input = gets.strip.downcase
-
-    if input == input.to_i > 0 && intput.to_i < champions.length
-      champion = champions.find_by_name(name) [input.to_i - 1]
-      # API.get_data(champion)
+    
+    if input == input.to_i > 0 && input.to_i < Champions.find_by_name(name).length
+      champ = Champions.find_by_name(name) [input.to_i - 1]
+      # API.getChampDeets(champion)
       print_champion_details(champion)
       
     elsif input == 'list'
-      # champion = Champions.find_by_name(name)
       champions_list(champions)
       
     elsif input == 'exit'
@@ -48,7 +47,7 @@ class LolChampStats::CLI
       champions_selection(champions)
     end
   end
-      binding.pry
+
   def print_champion_details(champion)
     puts champion.name
     puts champion.title
@@ -58,10 +57,12 @@ class LolChampStats::CLI
   end
   
   def goodbye
+    puts ""
     puts "GLHF!"
   end
   
   def invalid_entry
+    puts ""
     puts ">>>>>>I don't understand. Please enter a valid response.<<<<<<"
     puts ""
   end

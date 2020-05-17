@@ -15,18 +15,19 @@ class API
 
     end
   end
+  #     binding.pry
 
-#   def self.getChampDeets(champion)
-#     response = HTTParty.get("https://raw.githubusercontent.com/ngryman/lol-champions/master/champions.json")
-#     champion_deets = JSON.parse(response)
-#     champions_array.each do |champion_deets|
+  # def self.getChampDeets(champion)
+  #   response = HTTParty.get("https://raw.githubusercontent.com/ngryman/lol-champions/master/champions.json")
+  #   champion_deets = JSON.parse(response)["id"]
+  #   champions_array.each do |champion_deets|
      
-#       description = champion_deets["description"]
-#       tags = champion_deets["tags"]
-#       stats = champion_deets["stats"]
+  #     description = champion_deets["description"]
+  #     tags = champion_deets["tags"]
+  #     stats = champion_deets["stats"]
       
-#       # Champions.new(description: description, tags: tags, stats: stats)
+  #     # Champions.new(description: description, tags: tags, stats: stats)
       
-#     end
-#   end
+  #   end
+  # end
 end
