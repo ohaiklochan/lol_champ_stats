@@ -17,7 +17,6 @@ class LolChampStats::CLI
     
     if input == 'champions'
       champions_list
-      
     elsif input == 'exit'
       goodbye
     else
@@ -42,15 +41,21 @@ class LolChampStats::CLI
   end
   
   def champions_selection(champions)
-    # binding.pry
     champ = Champions.find_by_name(champions)
     champ.each do |champion|
+      puts ""
       puts "Name: #{champion.name}"
       puts "Title: #{champion.title}"
       puts "Tags: #{champion.tags}"
       puts "Description: #{champion.description}"
       puts "Stats: #{champion.stats}"
+      puts ""
+      puts ""
+      puts "Did you want to see another champion?"
+      puts "Type 'champions' to see the list again."
+      puts "Type 'exit' to exit the program."
     end
+    menu
   end
 
   def goodbye
