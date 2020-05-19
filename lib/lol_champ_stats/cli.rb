@@ -36,7 +36,7 @@ class LolChampStats::CLI
     puts ""
     puts "Choose a champion:"
     puts ""
-    Champions.all.each.with_index(0) do |champion, index|
+    Champions.all.each.with_index(1) do |champion, index|
       puts "#{index}. #{champion.name}"
     end
     puts ""
@@ -57,7 +57,7 @@ class LolChampStats::CLI
       puts ""
       puts "Title: #{champion.title}"
       puts ""
-      puts "Tags: #{champion.tags}"
+      puts "Tags: #{champion.tags.join(', ')}"
       puts ""
       puts "Description: #{champion.description}"
       puts ""
