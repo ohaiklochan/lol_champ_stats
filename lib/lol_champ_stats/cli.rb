@@ -61,7 +61,7 @@ class LolChampStats::CLI
       puts ""
       puts "Description: #{champion.description}"
       puts ""
-      puts "Stats: #{champion.stats}"
+      puts "Stats: #{champion.stats.each {|k,v| puts "#{k} = #{v}"}}"
       puts ""
       puts ""
       puts "Did you want to see another champion?"
