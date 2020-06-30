@@ -57,7 +57,7 @@ class LolChampStats::CLI
       puts ""
       puts "Title: #{champion.title}"
       puts ""
-      puts "Tags: #{champion.tags.join(', ')}"
+      puts "Type: #{champion.tags.join(', ')}"
       puts ""
       puts "Description: #{champion.description}"
       puts ""
